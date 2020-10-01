@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Programming Assignment 2">
+  <meta name="author" content="rpsh88">
+
+  <title>Durham University Pool League</title>
+
+  <!-- Bootstrap core CSS -->
+  <!-- Bootstrap template: https://startbootstrap.com/previews/agency/ -->
+  <!-- License: .\LICENSE -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- W3 CSS -->
+  <link href="css/w3.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="css/fonts.css" rel="stylesheet" type="text/css">
+  <!-- Custom bootstrap styles for this template -->
+  <link href="css/agency.min.css" rel="stylesheet">
+
+  <!-- Custom css in addition to the template -->
+  <link href="css/index.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">DUPL</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#league">League</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#results">Results</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#submit">Sumbit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#exec">Exec</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-heading text-uppercase">Durham University Pool League</div>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#league">See More</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- League -->
+  <section class="page-section" id="league">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">League</h2>
+          <h3 class="section-subheading text-muted">Objectives and goals</h3>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <h4 class="service-heading">Competition</h4>
+          <p class="text-muted">Provide a fair and competitive environment for students to improve and learn. More
+            importantly, students get to have fun and learn about how to interact with different cultures.</p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="service-heading">Equipment</h4>
+          <p class="text-muted">Provide access to appropriate and necessary facilities and equipment for all members to
+            use and play pool. The tables are maintained and kept a high standard so the students can excel in the game.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="service-heading">Social</h4>
+          <p class="text-muted">Provide opportunities for students to be involved in the social life of the college and
+            university. Balancing your time between work and play is an important skill for students to learn before
+            entering the workforce.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h3 class="section-subheading text-muted" style="padding-top: 100px;">United We Stand – Together We Play</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="page-section">
+    <div class="container ">
+      <div class="col-lg-12 text-center" id="results">
+        <h2 class="section-heading text-uppercase">Results</h2>
+        <h3 class="section-subheading text-muted" id="desc">Table below shows the 10 latest matches</h3>
+      </div>
+      <div class="tcontainer" style="overflow-x: scroll; min-height: 400px;">
+        <table id="scoreboard" class="scoreboard striped" style="width:100%">
+          <thead>
+            <tr class="header">
+              <th class="Date">Date</th>
+              <th class="Home">Home</th>
+              <th class="Team">College</th>
+              <th class="Score">Score</th>
+              <th class="Away">Away</th>
+              <th class="Team">College</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="trow">
+              <td id="spin1" style=" position: relative; left:40%">
+                <div class="spinner-border" role="status" style="margin-top: 100px; margin-bottom: 100px;">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="md-form active-cyan-2 mb-3 input-group row"
+        style="padding: 10px 30px; max-width: 100%; position: relative;">
+        <form class="col" id="searchForm" name="searchForm" action="/search">
+          <input class="form-control py-2 border-right-0 border" id="keyword" type="search"
+            placeholder="Search for keywords..." style="max-width: 200px;" maxlength="20" required="required" style="padding-left: 10px;">
+          <button id="searchBtn" class="btn btn-outline-success my-2 my-sm-0"
+            style="text-align: center; margin-left: 10px;"><span
+              class="glyphicon glyphicon-search"></span>Search</button>
+        </form>
+        <div class="col">
+        <button id="refreshBtn" class="btn btn-secondary" style="position: absolute; right: 0%;">Refresh</button>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Submit -->
+  <section class="page-section" id="submit">
+    <div class="container" style="text-align: center;">
+      <div class="col-lg-12 text-center" style="margin-bottom:50px;">
+        <h2 class="section-heading text-uppercase">Submit</h2>
+        <h3 class="section-subheading text-muted">Use the form to submit the details of your matches</h3>
+      </div>
+      <form id="addForm" name="addForm" action="/adddata" method="post">
+        <div class="date form-group" style="width: 350px; margin:0 auto;">
+          <h3 style="margin:20px 0px;">Date</h3>
+          <div class="row text-center">
+            <div class="col form-group">
+              <select class="form-control" id="Day" name="Day" style="min-width: fit-content" required="required">
+                <option value="">Day</option>
+                <option value="01">1</option>
+                <option value="02">2</option>
+                <option value="03">3</option>
+                <option value="04">4</option>
+                <option value="05">5</option>
+                <option value="06">6</option>
+                <option value="07">7</option>
+                <option value="08">8</option>
+                <option value="09">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+            </div>
+            <div class="col">
+              <select class="form-control" id="Month" name="Month" style="min-width: fit-content;" required="required">
+                <option value="">Month</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+            </div>
+            <div class="col">
+              <select class="form-control" id="Year" name="Year" style="min-width: fit-content" required="required">
+                <option value="">Year</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="submit form-group row text-center" style="margin:50px 0px;">
+          <div>
+            <h3 style="margin:20px 0px;">Home</h3>
+            <div class="row col" style="min-width: fit-content; align-content: center;">
+              <div class="col">
+                <input class="form-control" id="Home" name="Home" type="text" placeholder="Player's Name *"
+                  minlength="5" maxlength="30" required="required" style="width:180px">
+              </div>
+              <div class="col">
+                <select class="form-control" id="HomeCollege" name="HomeCollege" style="width:fit-content"
+                  required="required">
+                  <option value="">College</option>
+                  <option value="Aidan's">Aidan's</option>
+                  <option value="Butler">Butler</option>
+                  <option value="Castle">Castle</option>
+                  <option value="Chad's">Chad's</option>
+                  <option value="Collingwood">Collingwood</option>
+                  <option value="Cuth's">Cuth's</option>
+                  <option value="Grey">Grey</option>
+                  <option value="Hatfield">Hatfield</option>
+                  <option value="Hild Bede">Hild Bede</option>
+                  <option value="John's">John's</option>
+                  <option value="Mary's">Mary's</option>
+                  <option value="Mildert">Mildert</option>
+                  <option value="Stephenson">Stephenson</option>
+                  <option value="Trevelyan">Trevelyan</option>
+                  <option value="Ustinov">Ustinov</option>
+                </select>
+              </div>
+              <div class="col">
+                <select class="form-control" id="HomeRank" style="width:fit-content" name="HomeRank">
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                  <option value="E">E</option>
+                  <option value="F">F</option>
+                  <option value="-">-</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="scoreselect" style="max-width: fit-content; margin:0px 20px">
+            <h3 style="margin:20px 0px;">Score</h3>
+            <div class="row col">
+              <div class="col">
+                <select class="form-control" id="Score" name="Score" required="required" style="min-width:90px;">
+                  <option value="">Score</option>
+                  <option value="10-0">10-0</option>
+                  <option value="9-1">9-1</option>
+                  <option value="8-2">8-2</option>
+                  <option value="7-3">7-3</option>
+                  <option value="6-4">6-4</option>
+                  <option value="5-5">5-5</option>
+                  <option value="4-6">4-6</option>
+                  <option value="3-7">3-7</option>
+                  <option value="2-8">2-8</option>
+                  <option value="1-9">1-9</option>
+                  <option value="0-10">0-10</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 style="margin:20px 0px;">Away</h3>
+            <div class="row col" style="min-width: fit-content; align-content: center;">
+              <div class="col">
+                <input class="form-control" id="Away" name="Away" type="text" placeholder="Player's Name *"
+                  minlength="5" maxlength="30" required="required" style="width:180px">
+              </div>
+              <div class="col">
+                <select class="form-control" id="AwayCollege" name="AwayCollege" style="width:fit-content"
+                  required="required">
+                  <option value="">College</option>
+                  <option value="Aidan's">Aidan's</option>
+                  <option value="Butler">Butler</option>
+                  <option value="Castle">Castle</option>
+                  <option value="Chad's">Chad's</option>
+                  <option value="Collingwood">Collingwood</option>
+                  <option value="Cuth's">Cuth's</option>
+                  <option value="Grey">Grey</option>
+                  <option value="Hatfield">Hatfield</option>
+                  <option value="Hild Bede">Hild Bede</option>
+                  <option value="John's">John's</option>
+                  <option value="Mary's">Mary's</option>
+                  <option value="Mildert">Mildert</option>
+                  <option value="Stephenson">Stephenson</option>
+                  <option value="Trevelyan">Trevelyan</option>
+                  <option value="Ustinov">Ustinov</option>
+                </select>
+              </div>
+              <div class="col">
+                <select class="form-control" id="AwayRank" style="width:fit-content" name="AwayRank">
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                  <option value="E">E</option>
+                  <option value="F">F</option>
+                  <option value="">-</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="addBtn" class="btn btn-outline-success my-2 my-sm-0" style="text-align: center;">Add</button>
+      </form>
+ 
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="page-section" >
+    <div class="container" id="gallery">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Gallery</h2>
+          <h3 class="section-subheading text-muted">Images of the club members and venues</h3>
+        </div>
+      </div>
+      <div id="spin2" class="w3-content w3-section" style="max-width:500px; max-height:500px; margin: 0 auto; position: relative;">
+        <div class="spinner-border" role="status"
+          style="position: relative; left: 45%; margin-top: 100px; margin-bottom: 100px;">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <div class="row" style="padding-top: 50px;">
+        <div class="col-lg-12 text-center">
+          <h3 class="btn btn-primary" id="addNewBtn" style="cursor: pointer;">Add new</h3>
+        </div>
+      </div>
+      <div id="myDIV" style="display: none;">
+        <form id="imgForm" class="col" name="imgForm" action="/addimg" method="post">
+          <div class="row">
+            <div class="col">
+              <input class="form-control" id="url" name="url" type="url" placeholder="URL *" maxlength="300"
+                required="required">
+            </div>
+            <div class="col" style="max-width: 100px;">
+              <button id="imgBtn" class="col btn btn-outline-success my-2 my-sm-0"
+                style="text-align: center; position: relative; min-width: fit-content">Add</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Exec -->
+  <section class="bg-light page-section" id="exec">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Executives</h2>
+          <h3 class="section-subheading text-muted">These are your exec for this season.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
+            <h4>Kay Garland</h4>
+            <h5 class="text-muted">President</h5>
+            <p class="text-muted">As President, Kay is responsible for the day to day running of the league, including
+              organising, chairing and setting the agenda for the exec meetings.</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
+            <h4>Larry Parker</h4>
+            <h5 class="text-muted">Treasurer</h5>
+            <p class="text-muted">Larry is responsible for the league’s accounts this year and will hopefully be making
+              sure that more money comes in than goes out!</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
+            <h4>Diana Pertersen</h4>
+            <h5 class="text-muted">Senior Referee</h5>
+            <p class="text-muted">Diana has been appointed the position of senior referee to provide all players with a
+              point of contact should a dispute over any ruling occur during matches.</p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="page-section" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Contact Us</h2>
+          <h3 class="section-subheading text-muted">If you have any suggestions, or queries, please get in touch</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <form id="contactForm" name="sentMessage" novalidate="novalidate">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required"
+                    data-validation-required-message="Please enter your name.">
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required"
+                    data-validation-required-message="Please enter your email address.">
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required"
+                    data-validation-required-message="Please enter your phone number.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <textarea class="form-control" id="message" placeholder="Your Message *" required="required"
+                    data-validation-required-message="Please enter a message."></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="col-lg-12 text-center">
+                <div id="success"></div>
+                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send
+                  Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <span class="copyright">Copyright &copy; DUPL 2020</span>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline quicklinks">
+            </li>
+            <li class="list-inline-item">
+              <a href="https://documenter.getpostman.com/view/11072610/Szf3YUby?version=latest" style="color: gray;">API Documentation</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="js/jquery.easing.min.js"></script>
+
+  <!-- Custom Bootstrap scripts for this template -->
+  <script src="js/agency.min.js"></script>
+  <!-- Contact form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Custom scripts for this website -->
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+.tcontainer {
+    max-width: 100%;
+
+}
+
+th {
+    padding: 0.8rem 3rem;
+    background: #222;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background: #c5c5c5;
+}
+
+tr:nth-child(odd) {
+    background: #fff;
+}
+
+td {
+    min-width: fit-content;
+}
+
+th,
+td {
+    padding: 0.8rem 3rem;
+    text-align: center;
+    font-size: 1.1rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+th {
+    font-size: 1.2rem;
+
+}
+
+.Date {
+    padding: 0.4rem;
+}
+
+.Home {
+    padding-right: 0;
+}
+
+.Away {
+    padding-right: 0;
+}
+
+.Team {
+    text-align: left;
+    padding-right: 0;
+}
+
+@media only screen and (max-width: 991px) {
+    .Team {
+        display: none;
+    }
+
+    th,
+    td {
+        padding: 0.8rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .Home {
+        padding: 0;
+        width: fit-content;
+    }
+
+    .Away {
+        padding: 0;
+        width: fit-content;
+
+    }
+
+    .Score {
+        padding: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .scoreselect {
+        padding-left: 10rem;
+    }
+
+    @media only screen and (max-width: 493px) {
+        .scoreselect {
+            padding-left: 5rem;
+        }
+
+
+        .submit {
+            display: flex;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .submit>div {
+            flex: 1;
+            /*grow*/
+        }
+
+        .col {
+            padding-top: 0.5rem;
+        }
+    }
+}
