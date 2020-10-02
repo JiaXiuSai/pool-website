@@ -2,7 +2,7 @@
 This project was made for Durham University First year for Programming module. The project is a single-page dynamic website for Durham University pool league. The website uses static HTML pages loading dynamic JSON content from server via AJAX. It's server is written in nodejs to provide JSON through REST API. 
 
 - A video demonstration of the website's features and installation steps can be found [here.](https://github.com/rpsh88/pool-website/blob/master/video/Demo.mp4)
-- The API Documentation can be found [here](https://documenter.getpostman.com/view/11072610/Szf3YUby?version=latest) ([pdf version](https://github.com/rpsh88/pool-website/blob/master/video/Demo.mp4))
+- The API Documentation can be found [here.](https://documenter.getpostman.com/view/11072610/Szf3YUby?version=latest) ([pdf version](https://github.com/rpsh88/pool-website/blob/master/video/Demo.mp4))
 
 # Setup
 > Download the repo and run the following commands via the command line in the project's directory:
